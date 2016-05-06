@@ -1,10 +1,14 @@
 {
-	"name": "opauth/live",
-	"description": "Live Connect strategy for Opauth",
-	"keywords": ["authentication","auth","live", "live connect", "windows", "microsoft", "windows live", "passport"],
+	"name": "opauth/outlook",
+	"description": "OUtlook/Office 365 Connect strategy for Opauth",
+	"keywords": ["authentication","auth","live", "live connect", "office365", "outlook" "windows", "microsoft", "windows live", "passport"],
 	"homepage": "http://opauth.org",
 	"license": "MIT",
 	"authors": [
+	        {
+	            "name": "Timm Stokke",
+	            "email": "timm@stokke.me"
+	        },		
 		{
 			"name": "U-Zyn Chua",
 			"email": "chua@uzyn.com",
