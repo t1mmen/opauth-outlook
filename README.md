@@ -1,32 +1,38 @@
-Opauth-Live
-================
-[Opauth][1] strategy for  (Microsoft) Live Connect authentication.
+Based on https://github.com/opauth/live
 
-Confusingly, Live Connect is (was) also known as:
+Opauth-Outlook
+=============
+[Opauth][1] strategy for Outlook authentication.
 
-- Windows Live
-- Microsoft Passport
-- Live ID
-- MSN ID
-
-Opauth is a multi-provider authentication framework for PHP.
+Implemented based on https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx
 
 Getting started
 ----------------
-1. Install Opauth-Live:
+1. Install Opauth-Outlook:
+
+   Using git:
    ```bash
    cd path_to_opauth/Strategy
-   git clone git://github.com/uzyn/opauth-live.git Live
+   git clone https://github.com/t1mmen/opauth-outlook.git outlook
    ```
 
-2. Create a Live Connect application at https://account.live.com/developers/applications
-   - Once application is created, be sure to go to _My apps_ > _API Settings_ to define your _redirect domain_ to be `http://path_to_opauth/live/oauth2callback.`
+  Or, using [Composer](https://getcomposer.org/), just add this to your `composer.json`:
 
-3. Configure Opauth-Live strategy.
+   ```bash
+   {
+       "require": {
+           "t1mmen/opauth-outlook": "*"
+       }
+   }
+   ```
+   Then run `composer install`.
 
-4. Direct user to `http://path_to_opauth/live` to authenticate
 
-5. If `email` field is needed, add `wl.emails` to scope parameter in `LiveStrategy.php` (line 38). E.g., `'scope' => 'wl.basic wl.emails'`.
+2. Create Outlook application at https://developer.outlook.com/apps/new
+
+3. Configure Opauth-Outlook strategy with at least `Client ID` and `Client Secret`.
+
+4. Direct user to `http://path_to_opauth/outlook` to authenticate
 
 Strategy configuration
 ----------------------
@@ -35,21 +41,15 @@ Required parameters:
 
 ```php
 <?php
-'Live' => array(
-  'client_id' => 'YOUR CLIENT ID',
-  'client_secret' => 'YOUR CLIENT SECRET'
+'Outlook' => array(
+	'client_id' => 'YOUR CLIENT ID',
+	'client_secret' => 'YOUR CLIENT SECRET',
 )
 ```
-Optional parameters:
-`scope`, `state`
-
-References
-------------
-- [Live Connect developer guide](http://msdn.microsoft.com/en-us/library/live/hh243641)
 
 License
 ---------
-Opauth-GitHub is MIT Licensed  
-Copyright © 2012 U-Zyn Chua (http://uzyn.com)
+Opauth-Outlook is MIT Licensed
+Copyright © 2016 Timm Stokke (http://timm.stokke.me)
 
-[1]: https://github.com/uzyn/opauth
+[1]: https://github.com/opauth/opauth
