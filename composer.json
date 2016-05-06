@@ -1,5 +1,5 @@
 {
-	"name": "opauth/outlook",
+	"name": "t1mmen/opauth-outlook",
 	"description": "OUtlook/Office 365 Connect strategy for Opauth",
 	"keywords": ["authentication","auth","live", "live connect", "office365", "outlook", "windows", "microsoft", "windows live", "passport"],
 	"homepage": "http://opauth.org",
